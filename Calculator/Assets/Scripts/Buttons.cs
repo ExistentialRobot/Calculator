@@ -30,7 +30,7 @@ public class Buttons : MonoBehaviour {
     public void EqualsButton()
     {
         print(math.mathOperator);
-        answer = num1 + math.mathOperator + num2;
+        result.text = num1 + math.mathOperator + num2;
         print(answer);
     }
 }
