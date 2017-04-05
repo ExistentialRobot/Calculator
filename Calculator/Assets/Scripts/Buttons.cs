@@ -8,29 +8,57 @@ public class Buttons : MonoBehaviour {
     public MathOperators math;
     public InputField num1;
     public InputField num2;
-    public string answer;
+    public int answer;
     public Text result;
+    public string value1;
+    public string value2;
+    public string mathOperator = "+";
+
+    public void value()
+    {
+        value1 = num1.text;
+        value2 = num2.text;
+        result.text = value1 + mathOperator + value2;
+    }
 
     public void PlusButton()
     {
-        math.mathOperator = "+";
+        mathOperator = "+";
     }
     public void MinusButtton()
     {
-        math.mathOperator = "-";
+        mathOperator = "-";
     }
     public void MultiplyButton()
     {
-        math.mathOperator = "*";
+        mathOperator = "*";
     }
     public void DivideButton()
     {
-        math.mathOperator = "/";
+        mathOperator = "/";
     }
     public void EqualsButton()
     {
-        print(math.mathOperator);
-        result.text = num1 + math.mathOperator + num2;
-        print(answer);
+        int firstNumber;
+        int secondNumber;
+        int.TryParse(value1, out firstNumber);
+        int.TryParse(value2, out secondNumber);
+
+        switch (mathOperator)
+        {
+            case "+":
+                answer = firstNumber += secondNumber;              
+                break;
+            case "-":
+                answer = firstNumber -= secondNumber;
+                break;
+            case "*":
+                answer = firstNumber *= secondNumber;
+                break;
+            case "/":
+                answer = firstNumber /= secondNumber;
+                break;
+        }
+        result.text = answer.ToString();
     }
 }
