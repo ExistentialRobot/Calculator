@@ -5,60 +5,77 @@ using UnityEngine.UI;
 
 public class Buttons : MonoBehaviour {
 
-    public MathOperators math;
     public InputField num1;
-    public InputField num2;
-    public int answer;
+    public InputField num2;  
     public Text result;
-    public string value1;
-    public string value2;
-    public string mathOperator = "+";
+    public string value1 = null;
+    public string value2 = null;
+    public string mathOperator = null;
+    public float x;
+    public float y;
+    public float answer;
 
     public void value()
     {
         value1 = num1.text;
         value2 = num2.text;
-        result.text = value1 + mathOperator + value2;
+        float.TryParse(value1, out x);
+        float.TryParse(value2, out y);
+        if (value2 != null && mathOperator != null && value2 != null)
+        {
+            result.text = value1 + mathOperator + value2;
+        }
     }
 
     public void PlusButton()
     {
-        mathOperator = "+";
+        mathOperator = " + ";
+        result.text = value1 + mathOperator;
     }
     public void MinusButtton()
     {
-        mathOperator = "-";
+        mathOperator = " - ";
+        result.text = value1 + mathOperator;
     }
     public void MultiplyButton()
     {
-        mathOperator = "*";
+        mathOperator = " * ";
+        result.text = value1 + mathOperator;
     }
     public void DivideButton()
     {
-        mathOperator = "/";
+        mathOperator = " / ";
+        result.text = value1 + mathOperator;
     }
     public void EqualsButton()
     {
-        int firstNumber;
-        int secondNumber;
-        int.TryParse(value1, out firstNumber);
-        int.TryParse(value2, out secondNumber);
-
-        switch (mathOperator)
+        if (mathOperator != null)
         {
-            case "+":
-                answer = firstNumber += secondNumber;              
-                break;
-            case "-":
-                answer = firstNumber -= secondNumber;
-                break;
-            case "*":
-                answer = firstNumber *= secondNumber;
-                break;
-            case "/":
-                answer = firstNumber /= secondNumber;
-                break;
+            switch (mathOperator)
+            {
+                case " + ":
+                    answer = x + y;
+                    break;
+                case " - ":
+                    answer = x - y;
+                    break;
+                case " * ":
+                    answer = x * y;
+                    break;
+                case " / ":
+                    answer = x / y;
+                    break;
+            }
         }
-        result.text = answer.ToString();
+        result.text = value1 + mathOperator + value2 + " = " + answer.ToString();
+        print(answer);
     }
+    public void ClearButton()
+    {
+        result.text = null;
+        mathOperator = null;
+        num1.text = null;
+        num2.text = null;
+    }
+
 }
