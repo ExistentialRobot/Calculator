@@ -14,6 +14,7 @@ public class Buttons : MonoBehaviour {
     public float x;
     public float y;
     public float answer;
+    
 
     public void value()
     {

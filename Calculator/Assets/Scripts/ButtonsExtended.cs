@@ -8,11 +8,13 @@ public class ButtonsExtended : MonoBehaviour {
     public Text result;
     public string value1 = null;
     public string value2 = null;
+    public string num = null;
     public string mathOperator = null;
     public float x;
     public float y;
     public float answer;
     public bool math = false;
+    public List<Button> numPad;
 
     public void PlusButton()
     {
@@ -38,145 +40,24 @@ public class ButtonsExtended : MonoBehaviour {
         math = true;
         result.text = value1 + mathOperator;
     }
-    public void OneButton()
+    public void ValueChange()
     {
         switch (math)
-        {
-            case true:
-                value2 += "1";
-                result.text = value1 + mathOperator + value2;
-                break;
-            default:
-                value1 += "1";
-                result.text = value1;
-                break;
-        }
+            {
+                case true:
+                    num = null;
+                    value2 += num;
+                    result.text = value1 + mathOperator + value2;
+                    break;
+                default:
+                    value1 += num;
+                    result.text = value1;
+                    break;
+            }
     }
-    public void TwoButton()
+   public void NumberButtons()
     {
-        switch (math)
-        {
-            case true:
-                value2 += "2";
-                result.text = value1 + mathOperator + value2;
-                break;
-            default:
-                value1 += "2";
-                result.text = value1;
-                break;
-        }
-    }
-    public void ThreeButton()
-    {
-        switch (math)
-        {
-            case true:
-                value2 += "3";
-                result.text = value1 + mathOperator + value2;
-                break;
-            default:
-                value1 += "3";
-                result.text = value1;
-                break;
-        }
-    }
-    public void FourButton()
-    {
-        switch (math)
-        {
-            case true:
-                value2 += "4";
-                result.text = value1 + mathOperator + value2;
-                break;
-            default:
-                value1 += "4";
-                result.text = value1;
-                break;
-        }
-    }
-    public void FiveButton()
-    {
-        switch (math)
-        {
-            case true:
-                value2 += "5";
-                result.text = value1 + mathOperator + value2;
-                break;
-            default:
-                value1 += "5";
-                result.text = value1;
-                break;
-        }
-    }
-    public void SixButton()
-    {
-        switch (math)
-        {
-            case true:
-                value2 += "6";
-                result.text = value1 + mathOperator + value2;
-                break;
-            default:
-                value1 += "6";
-                result.text = value1;
-                break;
-        }
-    }
-    public void SevenButton()
-    {
-        switch (math)
-        {
-            case true:
-                value2 += "7";
-                result.text = value1 + mathOperator + value2;
-                break;
-            default:
-                value1 += "7";
-                result.text = value1;
-                break;
-        }
-    }
-    public void EightButton()
-    {
-        switch (math)
-        {
-            case true:
-                value2 += "8";
-                result.text = value1 + mathOperator + value2;
-                break;
-            default:
-                value1 += "8";
-                result.text = value1;
-                break;
-        }
-    }
-    public void NineButton()
-    {
-        switch (math)
-        {
-            case true:
-                value2 += "9";
-                result.text = value1 + mathOperator + value2;
-                break;
-            default:
-                value1 += "9";
-                result.text = value1;
-                break;
-        }
-    }
-    public void ZeroButton()
-    {
-        switch (math)
-        {
-            case true:
-                value2 += "0";
-                result.text = value1 + mathOperator + value2;
-                break;
-            default:
-                value1 += "0";
-                result.text = value1;
-                break;
-        }
+
     }
     public void EqualsButton()
     {
