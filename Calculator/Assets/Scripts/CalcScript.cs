@@ -14,6 +14,7 @@ public class CalcScript : MonoBehaviour {
     public float y;
     public float z;
     public bool math = false;
+    public List<Text> nums;
 
     public void EqualsButton()
     {
