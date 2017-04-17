@@ -37,7 +37,6 @@ public class CalcScript : MonoBehaviour {
                     break;
             }
         }
-        print(z);
         equationLine.text = valueX + mathOp + valueY + " = " + z.ToString();
         valueX = null;
         valueY = null;

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Calculator.unity
+- path: Assets/CalculatorGame.unity
   isLoaded: 1
   isActive: 1
