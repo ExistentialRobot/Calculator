@@ -5,27 +5,33 @@ using UnityEngine.UI;
 
 public class Astroids : MonoBehaviour {
 
-    public Image astroid;
-    public CalcScript blaster;
+    public CalcScript breaker;
     public int numAstroid;
-    public float astroidPosition = 0;
-    public Vector3 placer;
     public Text number;
+    public GameObject astroid;
+    public Text gameOver;
+
 
     void Start ()
     {
+
         numAstroid = Random.Range(1, 20);
         number.text = numAstroid.ToString();
-        blaster.nums.Add(number);
     }
 
     void Update()
     {
-        if (blaster.z == numAstroid)
+        if (breaker.z == numAstroid)
         {
-            Text.Destroy(number);
-            blaster.nums.Remove(number);
-
-        } 
+            GameObject.Destroy(astroid);
+        }     
 	}
+    private void OnCollision2DEnter(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "Ground")
+        {
+            print("gameOver");
+            gameOver.text = "GAME OVER";
+        }
+    } 
 }
