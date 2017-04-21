@@ -14,6 +14,7 @@ public class CalcScript : MonoBehaviour {
     public float y;
     public float z;
     public bool math = false;
+    public Astroids score;
 
     public void EqualsButton()
     {
@@ -38,6 +39,7 @@ public class CalcScript : MonoBehaviour {
             }
         }
         equationLine.text = valueX + mathOp + valueY + " = " + z.ToString();
+        score.mathThing = mathOp;
         valueX = null;
         valueY = null;
         math = false;
