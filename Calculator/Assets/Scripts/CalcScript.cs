@@ -14,7 +14,7 @@ public class CalcScript : MonoBehaviour {
     public float y;
     public float z;
     public bool math = false;
-    public Astroids score;
+    public int score;
 
     public void EqualsButton()
     {
