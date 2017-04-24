@@ -39,7 +39,6 @@ public class CalcScript : MonoBehaviour {
             }
         }
         equationLine.text = valueX + mathOp + valueY + " = " + z.ToString();
-        score.mathThing = mathOp;
         valueX = null;
         valueY = null;
         math = false;
