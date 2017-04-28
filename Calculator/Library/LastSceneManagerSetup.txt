@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/GotItWorking.unity
+- path: Assets/GameComplete.unity
   isLoaded: 1
   isActive: 1

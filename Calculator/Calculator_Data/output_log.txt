@@ -2,11 +2,11 @@ Mono path[0] = 'C:/Users/miste/Calculator/Calculator/Calculator_Data/Managed'
 Mono path[1] = 'C:/Users/miste/Calculator/Calculator/Calculator_Data/Mono'
 Mono config path = 'C:/Users/miste/Calculator/Calculator/Calculator_Data/Mono/etc'
 PlayerConnection initialized from C:/Users/miste/Calculator/Calculator/Calculator_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55197
-Multi-casting "[IP] 192.168.0.116 [Port] 55197 [Flags] 2 [Guid] 208859217 [EditorId] 3878769135 [Version] 1048832 [Id] WindowsPlayer(DESKTOP-B2QNBQM) [Debug] 0" to [225.0.0.222:54997]...
-Started listening to [0.0.0.0:55197]
-PlayerConnection already initialized - listening to [0.0.0.0:55197]
-Initialize engine version: 5.5.0f3 (38b4efef76f0)
+PlayerConnection initialized network socket : 0.0.0.0 55188
+Multi-casting "[IP] 192.168.0.116 [Port] 55188 [Flags] 2 [Guid] 1194344506 [EditorId] 1250661665 [Version] 1048832 [Id] WindowsPlayer(DESKTOP-B2QNBQM) [Debug] 0" to [225.0.0.222:54997]...
+Started listening to [0.0.0.0:55188]
+PlayerConnection already initialized - listening to [0.0.0.0:55188]
+Player data archive not found at `C:/Users/miste/Calculator/Calculator/Calculator_Data/data.unity3d`, using local filesystemInitialize engine version: 5.6.0f3 (497a0f351392)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
@@ -23,17 +23,16 @@ Platform assembly: C:\Users\miste\Calculator\Calculator\Calculator_Data\Managed\
 Loading C:\Users\miste\Calculator\Calculator\Calculator_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\miste\Calculator\Calculator\Calculator_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\miste\Calculator\Calculator\Calculator_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\miste\Calculator\Calculator\Calculator_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
-Loading C:\Users\miste\Calculator\Calculator\Calculator_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
 Platform assembly: C:\Users\miste\Calculator\Calculator\Calculator_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\miste\Calculator\Calculator\Calculator_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.150 seconds
+- Completed reload, in  0.029 seconds
 Platform assembly: C:\Users\miste\Calculator\Calculator\Calculator_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\miste\Calculator\Calculator\Calculator_Data\Managed\System.dll (this message is harmless)
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.506642 ms
-Setting up 1 worker threads for Enlighten.
-  Thread -> id: fc4 -> priority: 1 
+UnloadTime: 3.684080 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 1d0c -> priority: 1 
+  Thread -> id: 1cc -> priority: 1 

@@ -6,15 +6,16 @@ using UnityEngine.UI;
 public class CalcScript : MonoBehaviour {
 
     public Text equationLine;
+    public Text scoreCount;
     public string valueX;
     public string valueY;
-    public string equation;
     public string mathOp;
     public float x;
     public float y;
     public float z;
     public bool math = false;
     public int score;
+    public int highScore = 0;
 
     public void EqualsButton()
     {

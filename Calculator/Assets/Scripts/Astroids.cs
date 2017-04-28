@@ -11,14 +11,14 @@ public class Astroids : MonoBehaviour {
     public CalcScript values;
     public Image astroid;
     public Vector3 placer;
-    public Vector3 startPosition;
-    public Collision status;
-    public GameObject canvas;
+    public Vector3 spawn;
+    public Collision coll;
 
     void Start()
-    {     
+    {   
         numAstroid = Random.Range(1, 20);
         number.text = numAstroid.ToString();
+        Time.timeScale = 0f;
     }
 
     void Update()
@@ -26,7 +26,7 @@ public class Astroids : MonoBehaviour {
         scoreCount.text = values.score.ToString();
         if (values.z == numAstroid)
         {
-            astroid.transform.localPosition = placer;
+            astroid.transform.localPosition = spawn;
             numAstroid = Random.Range(1, 20);
             number.text = numAstroid.ToString();
             switch (values.mathOp)
@@ -47,10 +47,12 @@ public class Astroids : MonoBehaviour {
         }
     }
 
-    public void restart()
+    public void Restart()
     {
-            astroid.transform.localPosition = startPosition;
-            canvas.SetActive(false);
-            Time.timeScale = 1;
+        coll.gameOverScene.SetActive(false);
+        astroid.transform.localPosition = placer;
+        values.score = 0;
+        values.scoreCount.text = values.score.ToString();
+        Time.timeScale = 1f;
     }
 }
