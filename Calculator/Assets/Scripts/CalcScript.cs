@@ -39,6 +39,11 @@ public class CalcScript : MonoBehaviour {
                     break;
             }
         }
+        else if(math == false)
+        {
+            float.TryParse(valueX, out x);
+            z = x;
+        }
         equationLine.text = valueX + mathOp + valueY + " = " + z.ToString();
         valueX = null;
         valueY = null;
@@ -49,6 +54,7 @@ public class CalcScript : MonoBehaviour {
         valueX = null;
         valueY = null;
         mathOp = null;
+        z = 0;
         math = false;
         equationLine.text = "0";
     }
